@@ -1,7 +1,13 @@
 const express = require("express");
 
 const app = express();
-const routes = require('../app/routes')
-app.use('/', routes)
 
-module.exports = app
+const path = require("path");
+
+app.use(express.static(path.join(__dirname,  "../public")));
+
+const routes = require("../app/routes");
+
+app.use("/", routes);
+
+module.exports = app;
