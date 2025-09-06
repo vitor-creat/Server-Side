@@ -32,17 +32,13 @@ let verificaMultiplo =  N % 3 == 0 ? "O numero é multiplo de 3" : "O numero nã
 
 //exercicio 5
 
-
-function eDivisivel(num, divisor) {
-  if (num % divisor == 0) {
-    console.log(true);
-  } else {
-    console.log(false);
-  }
+let num = 10
+let divisor = 3
+function eDivisivel() {
+ num % divisor == 0 ? true : false
 }
-
-resultadoFunc = eDivisivel(10,3)
-
+eDivisivel()
+let resultadoFunc =  num % divisor == 0 ? true : false
 
 //exercicio 6
 let numeros = [1,2,3,4,5,10,15,20,22,33,35]
