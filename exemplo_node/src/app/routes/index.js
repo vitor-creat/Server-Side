@@ -4,7 +4,7 @@ const getAlunos = require('../controller/getAlunos')
 const getExercicios = require('../controller/exercicios')
 const getExercicio_estatico = require("../controller/getExercicio")
 routes.get("/", get)
-routes.get('/alunos', getAlunos)
+routes.get('/alunos/:nomeAluno/nota1/:notaAluno', getAlunos)
 routes.get('/exercicios', getExercicios)
 routes.get('/exercicios_estaticos', getExercicio_estatico)
 //caminho na url apos o localhost:3000 para saber onde/oq deve ser mostrado na pagina
