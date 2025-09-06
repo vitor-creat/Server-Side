@@ -32,7 +32,7 @@
 //   console.log(`O numero ${N} é multiplo de 3`);
 // } else {
 //   console.log(`O numero ${N} não é multiplo de 3`);
-//}
+// }
 
 // 5. Crie uma função chamada eDivisivel que recebe dois números
 // (num e divisor) e retorna:
@@ -83,3 +83,18 @@
 //   console.log(Str_inv)
 // }
 // InverterString("Gundam")
+
+
+
+let Str_inv = ""
+function InverterString(Str) {
+  for (let i = 5; i >= 0; i--) {
+    Str_inv += Str[i]
+    
+  }
+  
+}
+InverterString("Gundam")
+let resultadoFraseInvertida = Str_inv
+
+console.log(resultadoFraseInvertida)
