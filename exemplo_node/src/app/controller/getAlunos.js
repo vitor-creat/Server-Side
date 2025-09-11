@@ -4,4 +4,4 @@ module.exports = (req, res) => {
     res.send(
     `<h1>Nome ${nome}, Nota:${nota}</h1>`
     )
-}
+} 
