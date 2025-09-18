@@ -1,5 +1,5 @@
 module.exports = (req, res) => {
-  let numeroString = req.params.numerosArr.split(",");
+  let numeroString = req.query.numerosArr.split(",");
   let numeros = numeroString.map(Number)
   let Somapares = 0;
   for (let i = 0; i < numeros.length; i++) {

@@ -1,5 +1,5 @@
 module.exports = (req, res) => {
-  let N = req.params.numero;
+  let N = req.query.numero;
   let numerosAteNString = "";
   for (let i = 1; i <= N; i++) {
     numerosAteNString += i + " ";

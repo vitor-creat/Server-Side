@@ -1,6 +1,6 @@
 module.exports = (req, res) => {
-  let num = req.params.numero;
-  let divisor = req.params.divisor;
+  let num = req.query.numero;
+  let divisor = req.query.divisor;
   function eDivisivel() {
     num % divisor == 0 ? true : false;
   }

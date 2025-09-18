@@ -4,6 +4,7 @@ const getAlunos = require("../controller/getAlunos");
 const getExercicios = require("../controller/exercicios");
 const getExercicio_estatico = require("../controller/getExercicio");
 const ex1 = require("../controller/ex1");
+const ex1QueryController = require ('../controller/ex1QueryController')
 const ex2 = require("../controller/ex2");
 const ex3 = require("../controller/ex3")
 const ex4 = require("../controller/ex4")
@@ -19,6 +20,8 @@ routes.get("/ex3/", ex3)
 routes.get("/ex4/numero/:numero", ex4)
 routes.get("/ex5/numero/:numero/divisor/:divisor", ex5)
 routes.get("/ex6/numeros/:numerosArr", ex6)
+
+routes.get("/ex1_query", ex1QueryController)
 
 
 
