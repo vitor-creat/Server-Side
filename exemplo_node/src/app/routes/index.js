@@ -21,6 +21,8 @@ routes.get("/", get);
 routes.get("/alunos/:nomeAluno/nota1/:notaAluno", getAlunos);
 routes.get("/exercicios", getExercicios);
 routes.get("/exercicios_estaticos", getExercicio_estatico);
+
+//Rotas dos arquivos HTML
 routes.get("/ex1", ex1)
 routes.get("/ex2", ex2)
 routes.get("/ex3", ex3)
@@ -28,12 +30,13 @@ routes.get("/ex4", ex4)
 routes.get("/ex5", ex5)
 routes.get("/ex6", ex6)
 
-routes.get("/ex1_query", ex1QueryController)
-routes.get("/ex2_query", ex2QueryController)
-routes.get("/ex3_query", ex3QueryController)
-routes.get("/ex4_query", ex4QueryController)
-routes.get("/ex5_query", ex5QueryController)
-routes.get("/ex6_query", ex6QueryController)
+//Rotas do resultado dos exercicios
+routes.get("/ex1/mostrar", ex1QueryController)
+routes.get("/ex2/mostrar", ex2QueryController)
+routes.get("/ex3/mostrar", ex3QueryController)
+routes.get("/ex4/mostrar", ex4QueryController)
+routes.get("/ex5/mostrar", ex5QueryController)
+routes.get("/ex6/mostrar", ex6QueryController)
 
 
 
