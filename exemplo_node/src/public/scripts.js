@@ -64,6 +64,4 @@ function InverterString(Str) {
 }
 InverterString("Gundam")
 let resultadoFraseInvertida = Str_inv
-
-
 document.getElementById('ex_1').innerHTML = resultadoFraseInvertida

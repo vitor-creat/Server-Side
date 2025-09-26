@@ -13,7 +13,6 @@ const ex6 = require("../controller/ex6");
 
 const ex1QueryController = require ('../controller/ex1QueryController')
 const ex2QueryController = require("../controller/ex2QueryController");
-const ex3QueryController = require("../controller/ex3QueryController");
 const ex4QueryController = require("../controller/ex4QueryController");
 const ex5QueryController = require("../controller/ex5QueryController");
 const ex6QueryController = require("../controller/ex6QueryController");
@@ -33,7 +32,6 @@ routes.get("/ex6", ex6)
 //Rotas do resultado dos exercicios
 routes.get("/ex1/mostrar", ex1QueryController)
 routes.get("/ex2/mostrar", ex2QueryController)
-routes.get("/ex3/mostrar", ex3QueryController)
 routes.get("/ex4/mostrar", ex4QueryController)
 routes.get("/ex5/mostrar", ex5QueryController)
 routes.get("/ex6/mostrar", ex6QueryController)
