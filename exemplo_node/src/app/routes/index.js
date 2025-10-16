@@ -16,10 +16,15 @@ const ex2QueryController = require("../controller/ex2QueryController");
 const ex4QueryController = require("../controller/ex4QueryController");
 const ex5QueryController = require("../controller/ex5QueryController");
 const ex6QueryController = require("../controller/ex6QueryController");
+const homeController = require("../controller/homeController");
+const aboutController = require("../controller/aboutController");
+
 routes.get("/", get);
 routes.get("/alunos/:nomeAluno/nota1/:notaAluno", getAlunos);
 routes.get("/exercicios", getExercicios);
 routes.get("/exercicios_estaticos", getExercicio_estatico);
+routes.get('/home', homeController);
+routes.get('/about', aboutController);
 
 //Rotas dos arquivos HTML
 routes.get("/ex1", ex1)
