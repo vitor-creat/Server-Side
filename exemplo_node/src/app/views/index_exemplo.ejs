@@ -17,12 +17,13 @@
 
     </style>
 </head>
-<body>
-    <header>
-      <%- include ("layout/header") %>
-    </header>
+<body> 
+   <header>
+    <%- include ("layout/header") %>
+   </header>
     <main>
-        <h1>Essa página é sobre alguma coisa que ainda não existe</h1>
+        <h1>Bem Vindo, <%=dados.nome_usuario%>!!!!</h1>
+        <h2>Perfil Logado: <%=dados.perfil_usuario%>!!!</h2>
     </main>
     <footer>
         <%- include("layout/footer") %>

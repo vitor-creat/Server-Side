@@ -1,3 +1,7 @@
 module.exports = (req, res) => {
-   res.render('index')
-}
+  const dados = {
+    nome_usuario: "Max",
+    perfil_usuario: "professor",
+  };
+  res.render("index_exemplo", {dados});
+};

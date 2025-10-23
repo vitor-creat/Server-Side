@@ -1,31 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        ul{
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-        ul li{
-            text-align: center;
-            padding: 15px 10px;
-        }
+  <head>
+ <%- include ('layout/head') %>
+  </head>
 
-    </style>
-</head>
-<body> 
-   <header>
-    <%- include ("layout/header") %>
-   </header>
-    <main>
-        <h1>Bem Vindo!!!!</h1>
-    </main>
-    <footer>
-        <%- include("layout/footer") %>
-    </footer>
-</body>
+  <body>
+    <header><h1>Minha lista de Exercicio</h1></header>
+    <div class="conteiner">
+      <div class="link-exercicio"><a href="/ex1">Exercicio 1</a></div>
+      <div class="link-exercicio"><a href="/ex2">Exercicio 2</a></div>
+      <div class="link-exercicio"><a href="/ex3">Exercicio 3</a></div>
+      <div class="link-exercicio"><a href="/ex4">Exercicio 4</a></div>
+      <div class="link-exercicio"><a href="/ex5">Exercicio 5</a></div>
+      <div class="link-exercicio"><a href="/ex6">Exercicio 6</a></div>
+    </div>
+  </body>
 </html>
+
