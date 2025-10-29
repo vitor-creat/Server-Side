@@ -9,7 +9,7 @@ module.exports = (req, res, next) => {
       throw new Error("Parâmetro Base não fornecido");
     }
     let area = base * altura;
-    res.send(`<h1>A Area do retangulo é igual a: ${area}</h1>`);
+    res.render("ex1", {area});
   } catch (error) {
     next(error)
   }
