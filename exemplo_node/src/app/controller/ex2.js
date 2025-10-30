@@ -1,3 +1,4 @@
 module.exports = (req, res) =>{
-    res.render("ex2")
+    let resultadoPar
+    res.render("ex2", {resultadoPar})
 }

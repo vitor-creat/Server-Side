@@ -1,3 +1,4 @@
 module.exports = (req, res) =>{
-    res.render("ex6")
+    let Somapares = ""
+    res.render("ex6", {Somapares})
 }

@@ -1,3 +1,4 @@
 module.exports = (req, res) =>{
-    res.render("ex1")
+    let area = ""
+    res.render("ex1",{area})
 }

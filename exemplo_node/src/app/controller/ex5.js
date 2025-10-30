@@ -1,3 +1,4 @@
 module.exports = (req, res) =>{
-    res.render("ex5")
+    let resultadoFunc = ""
+    res.render("ex5", {resultadoFunc})
 }

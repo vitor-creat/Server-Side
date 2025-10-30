@@ -1,3 +1,6 @@
-module.exports = (req, res) =>{
-    res.render("ex4")
-}
+module.exports = (req, res) => {
+  let numerosAteNString = "";
+  let verificaMultiplo = "";
+
+  res.render("ex4", { numerosAteNString, verificaMultiplo });
+};

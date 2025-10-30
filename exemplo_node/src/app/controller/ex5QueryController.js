@@ -16,7 +16,7 @@ module.exports = (req, res, next) => {
     num % divisor == 0 ? true : false;
   }
   eDivisivel();
-  let resultadoFunc = num % divisor == 0 ? true : false;
+  let resultadoFunc = num % divisor == 0 ? "é divisivel" : "Não é divisivel";
 
   res.render("ex5", {resultadoFunc})
 };
