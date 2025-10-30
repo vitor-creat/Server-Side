@@ -3,6 +3,7 @@
   <head>
  <%- include ('layout/head') %>
   </head>
+  <%- include ('layout/header') %>
   <body class="body-exercicio">
     <form action="/ex6/mostrar">
       <fieldset>
@@ -12,5 +13,7 @@
         <button type="submit">Calcular</button>
       </fieldset>
     </form>
+    <div class="resultado"> <%= Somapares %> </div>
+    <%- include ('layout/footer') %>
   </body>
 </html>

@@ -3,7 +3,7 @@
   <head>
  <%- include ('layout/head') %>
   </head>
-
+  <%- include ('layout/header') %>
   <body class="body-exercicio">
     <form action="/ex2/mostrar">
       <fieldset>
@@ -13,5 +13,7 @@
         <button type="submit">Calcular</button>
       </fieldset>
     </form>
+    <div class="resultado"><%=resultadoPar%></div>
+    <%- include ('layout/footer') %>
   </body>
 </html>

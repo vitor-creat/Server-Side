@@ -14,5 +14,5 @@ module.exports = (req, res, next) => {
   }
   let verificaMultiplo =
     N % 3 == 0 ? "O numero é multiplo de 3" : "O numero não é multiplo de 3";
-  res.send(`<h1>${numerosAteNString + "e" + " " + verificaMultiplo}</h1>`);
+  res.render('ex4', {numerosAteNString}, {verificaMultiplo});
 };

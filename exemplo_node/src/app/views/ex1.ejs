@@ -3,7 +3,10 @@
   <head>
     <%- include ('layout/head') %>
   </head>
-  <body class="body-exercicio">
+  <header>
+     <%- include ('layout/header') %>
+  </header>
+  <body>
     <form action="/ex1/mostrar">
       <fieldset>
         <legend>Calcular a area do triângulo</legend>
@@ -14,6 +17,7 @@
         <button type="submit">Calcular</button>
       </fieldset>
     </form>
-    <div><%= area %></div>
+    <div class="resultado"> <%=area%> </div>
+     <%- include ('layout/footer') %>
   </body>
 </html>

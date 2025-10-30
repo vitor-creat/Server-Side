@@ -15,5 +15,5 @@ let numeros = numeroString.map(Number)
       Somapares += numeros[i]; //2 4 10 20 22
     }
   }
-  res.send(`A soma dos pares é: ${Somapares}`)
+  res.render("ex6",{Somapares})
 };

@@ -18,5 +18,5 @@ module.exports = (req, res, next) => {
   eDivisivel();
   let resultadoFunc = num % divisor == 0 ? true : false;
 
-  res.send(`O resultado é: ${resultadoFunc}`)
+  res.render("ex5", {resultadoFunc})
 };
