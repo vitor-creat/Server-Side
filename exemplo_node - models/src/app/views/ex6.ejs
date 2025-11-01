@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+ <%- include ('layout/head') %>
+  </head>
+  <%- include ('layout/header') %>
+  <body class="body-exercicio">
+    <form action="/exercicios/ex6/calcular">
+      <fieldset>
+        <legend>Digita uma sequência ai</legend>
+        <label>Digita sequência separando os numeros por vírgula</label>
+        <input name="numerosArr">
+        <button type="submit">Calcular</button>
+      </fieldset>
+    </form>
+    <div class="resultado"> <%= Somapares %> </div>
+    <%- include ('layout/footer') %>
+  </body>
+</html>
