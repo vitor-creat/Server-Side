@@ -7,7 +7,7 @@
      <%- include ('layout/header') %>
   </header>
   <body>
-    <form action="/exercicios/ex1/calcular">
+    <form action="/exercicios/ex1">
       <fieldset>
         <legend>Calcular a area do triângulo</legend>
         <label>Base</label>
@@ -17,7 +17,11 @@
         <button type="submit">Calcular</button>
       </fieldset>
     </form>
-    <div class="resultado"> <%=area%> </div>
+    <div class="resultado"><% exercicio1.forEach(resultado => { %>
+      <%=exercicio1.area%> 
+      <% }); %>
+      </div>
+
      <%- include ('layout/footer') %>
   </body>
 </html>

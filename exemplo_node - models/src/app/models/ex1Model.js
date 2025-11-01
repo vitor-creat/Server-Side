@@ -1,14 +1,11 @@
-let ex1 = []
+let resultados = []
 
-function AdicionarNumeros(numeros) {
-    ex1.push({id: Date.now(), numeros})
+function CalculaArea(base, altura) {
+    const area = base*altura
+    resultados.push({area: area})
 }
-function exibirEx1() {
-    return ex1;
-}
-
-function RemoverEx1(id) {
-    ex1 = ex1.filter(exercicio => exercicio.id !== id)
+function exibirResultado() {
+    return resultados;
 }
 
-module.exports = {AdicionarNumeros, exibirEx1, RemoverEx1}
+module.exports = {CalculaArea, exibirResultado}
