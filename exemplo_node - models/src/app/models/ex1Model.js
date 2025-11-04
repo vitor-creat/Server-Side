@@ -1,11 +1,13 @@
 let resultados = []
 
-function CalculaArea(base, altura) {
+function calculaArea(base, altura) {
     const area = base*altura
     resultados.push({area: area})
+
+    return resultados
 }
 function exibirResultado() {
     return resultados;
 }
 
-module.exports = {CalculaArea, exibirResultado}
+module.exports = {calculaArea, exibirResultado}

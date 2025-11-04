@@ -30,7 +30,7 @@ routes.get("/ex6/calcular", ex6EJSRefatorado.calcular);
 
 routes.get("/ex1",  ex1EJSRefatorado.exibirResultado)
 
-routes.get("/ex1/calcular", ex1EJSRefatorado.CalculaArea)
+routes.get("/ex1/calcular", ex1EJSRefatorado.calculaArea)
 
 
 
