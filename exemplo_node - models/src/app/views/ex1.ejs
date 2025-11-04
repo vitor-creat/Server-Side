@@ -3,25 +3,24 @@
   <head>
     <%- include ('layout/head') %>
   </head>
-  <header>
-     <%- include ('layout/header') %>
-  </header>
+  <header><%- include ('layout/header') %></header>
   <body>
-    <form action="/exercicios/ex1">
+    <form action="/exercicios/ex1/calcular">
       <fieldset>
         <legend>Calcular a area do triângulo</legend>
         <label>Base</label>
-        <input name="base">
+        <input name="base" />
         <label>Altura</label>
-        <input name="altura">
+        <input name="altura" />
         <button type="submit">Calcular</button>
       </fieldset>
     </form>
-    <div class="resultado"><% exercicio1.forEach(resultado => { %>
-      <%=exercicio1.area%> 
-      <% }); %>
-      </div>
+    <div class="resultado">
+      <% exercicio1.forEach(resultado => { %>
+            <li><%= resultados.area %></li>
+        <% }); %>
+    </div>
 
-     <%- include ('layout/footer') %>
+    <%- include ('layout/footer') %>
   </body>
 </html>

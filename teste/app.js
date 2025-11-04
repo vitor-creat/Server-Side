@@ -11,5 +11,5 @@ app.get('/adicionar', (req, res) => res.render('adicionarTarefa'));
 app.post('/adicionar', tarefaController.adicionarTarefa);
 app.get('/remover/:id', tarefaController.removerTarefa);
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => console.log(`Servidor rodando na porta ${PORT}`));
