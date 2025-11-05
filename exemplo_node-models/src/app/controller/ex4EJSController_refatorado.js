@@ -1,25 +1,19 @@
-module.exports.calcular = (req, res, next) => {
+const ex4 = require("../models/ex4Model")
+module.exports.listarNumerosEMultiploDe3 = (req, res, next) => {
   let N = req.query.numero;
-  let numerosAteNString = "";
-
-  try {
-    if (N == null) {
-      throw new Error("Parâmetro não definido");
-    }
-  } catch (error) {
-    next(error);
-  }
-  for (let i = 1; i <= N; i++) {
-    numerosAteNString += i + " ";
-  }
-  let verificaMultiplo =
-    N % 3 == 0 ? "O numero é multiplo de 3" : "O numero não é multiplo de 3";
-  res.render('ex4', {numerosAteNString, verificaMultiplo});
+  const exercicio4 = ex4.listarNumerosEMultiploDe3(N)
+  const n = exercicio4.length;
+  const start = n - 5 > 0 ? n - 5 : 0;
+  ultimosExercicios = exercicio4.slice(start, n);
+  res.render('ex4', {ultimosExercicios});
 };
 
 
-module.exports.mostrar = (req, res) => {
-  let verificaMultiplo = "";
-  res.render("ex4", { numerosAteNString, verificaMultiplo });
+module.exports.exibirResultado = (req, res) => {
+  const exercicio4 = ex4.exibirResultado(N)
+  const n = exercicio4.length;
+  const start = n - 5 > 0 ? n - 5 : 0;
+  ultimosExercicios = exercicio4.slice(start, n);
+  res.render("ex4", { ultimosExercicios });
 
 };

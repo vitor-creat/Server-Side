@@ -13,24 +13,24 @@ const ex6EJSRefatorado = require("../controller/ex6EJSController_refatorado");
 // routes.get("/exercicios", getExercicios);
 // routes.get("/exercicios_estaticos", getExercicio_estatico);
 
-// routes.get("/ex1", ex1EJSRefatorado.mostrar);
-routes.get("/ex2", ex2EJSRefatorado.mostrar);
+routes.get("/ex1", ex1EJSRefatorado.exibirResultado)
+routes.get("/ex2", ex2EJSRefatorado.exibirResultadoVerificaPar);
 routes.get("/ex3", ex3);
-routes.get("/ex4", ex4EJSRefatorado.mostrar);
+routes.get("/ex4", ex4EJSRefatorado.exibirResultado);
 routes.get("/ex5", ex5EJSRefatorado.mostrar);
 routes.get("/ex6", ex6EJSRefatorado.mostrar);
 
 //Rotas do resultado dos exercicios
-// routes.get("/ex1/calcular", ex1EJSRefatorado.calcular);
-routes.get("/ex2/calcular", ex2EJSRefatorado.calcular);
-routes.get("/ex4/calcular", ex4EJSRefatorado.calcular);
+routes.get("/ex1/calcular", ex1EJSRefatorado.calculaArea)
+routes.get("/ex2/calcular", ex2EJSRefatorado.verificaPar);
+routes.get("/ex4/calcular", ex4EJSRefatorado.listarNumerosEMultiploDe3);
 routes.get("/ex5/calcular", ex5EJSRefatorado.calcular);
 routes.get("/ex6/calcular", ex6EJSRefatorado.calcular);
 
 
-routes.get("/ex1",  ex1EJSRefatorado.exibirResultado)
 
-routes.get("/ex1/calcular", ex1EJSRefatorado.calculaArea)
+
+
 
 
 

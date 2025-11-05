@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
- <%- include ('layout/head') %>
-  </head>
-  <%- include ('layout/header') %>
+
+<head>
+  <%- include ('layout/head') %>
+</head>
+<%- include ('layout/header') %>
+
   <body class="body-exercicio">
     <form action="/exercicios/ex4/calcular">
       <fieldset>
@@ -13,7 +15,18 @@
         <button type="submit">Calcular</button>
       </fieldset>
     </form>
-    <div class="resultado"> <%=numerosAteNString%> <%=verificaMultiplo%> </div>
-    <%- include ('layout/footer') %>
+    <div class="resultado">
+      <% ultimosExercicios.forEach(resultadosObj=> { %>
+        <li>
+          <%= resultadosObj.resultados %>
+          <%= resultadosObj.numerosAteN %>
+        </li>
+        <% }); %>
+    </div>
+    <%=numerosAteNString%>
+      <%=verificaMultiplo%>
+        </div>
+        <%- include ('layout/footer') %>
   </body>
+
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
- <%- include ('layout/head') %>
+    <%- include ('layout/head') %>
   </head>
   <%- include ('layout/header') %>
   <body class="body-exercicio">
@@ -9,11 +9,15 @@
       <fieldset>
         <legend>Verifique se seu numero é par</legend>
         <label>Insira um numero</label>
-        <input name="numero">
+        <input name="numero" />
         <button type="submit">Calcular</button>
       </fieldset>
     </form>
-    <div class="resultado"><%=resultadoPar%></div>
+    <div class="resultado">
+      <% ultimosExercicios.forEach(resultados => { %>
+      <li><%= resultados.numero %></li>
+      <% }); %>
+    </div>
     <%- include ('layout/footer') %>
   </body>
 </html>
