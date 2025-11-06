@@ -1,0 +1,73 @@
+<!doctype html>
+<title>
+    <%= question ? question.title : 'Questão' %>
+</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style_extra.css">
+</head>
+
+<body>
+    <main class="page">
+        <div class="container">
+            <% if (!question) { %>
+                <div class="card empty">
+                    <h2>Questão não encontrada</h2>
+                    <p>Verifique se o link está correto ou volte para a lista de questões.</p>
+                </div>
+                <% } else { %>
+
+
+                    <article class="card question-card">
+                        <header>
+                            <h2 class="question-title">
+                                <%= question.title %>
+                            </h2>
+                        </header>
+
+
+                        <section class="question-body">
+                            <p>
+                                <%= question.description %>
+                            </p>
+                        </section>
+
+
+                        <form class="answer-form"
+                            action="<%= submitAction || ('/questions/' + (question.id || '') + '/submit') %>"
+                            method="POST" novalidate>
+                            <div class="field">
+                                <label for="answer">Sua resposta</label>
+                                <input id="answer" name="answer" type="text" placeholder="Digite sua resposta aqui"
+                                    value="<%= typeof previousAnswer !== 'undefined' ? previousAnswer : '' %>" required>
+                            </div>
+
+
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary">Enviar</button>
+                            </div>
+                        </form>
+
+
+                        <% if (typeof resultMessage !=='undefined' ) { %>
+                            <div class="result-card <%= isCorrect ? 'correct' : 'incorrect' %>">
+                                <p class="result-text">
+                                    <%= resultMessage %>
+                                </p>
+                                <% if (typeof showExpected !=='undefined' && showExpected) { %>
+                                    <p class="expected"><strong>Esperado:</strong>
+                                        <%= question.expectedResult %>
+                                    </p>
+                                    <% } %>
+                            </div>
+                            <% } %>
+
+
+                    </article>
+
+
+                    <% } %>
+        </div>
+    </main>
+</body>
+
+</html>
