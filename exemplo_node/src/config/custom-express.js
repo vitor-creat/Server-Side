@@ -1,4 +1,4 @@
-//chamo o express por meio do require e armazeno em uma express
+
 const express = require("express");
 
 const app = express();
@@ -15,7 +15,8 @@ app.set("views", path.join(__dirname, "..", "app", "views"));
 
 const routes = require("../app/routes");
 const routes_exercs = require("../app/routes/exercicios");
-
+const routes_professor = require("../app/routes/professor")
 app.use("/", routes);
 app.use("/exercicios", routes_exercs)
+app.use("/professor", routes_professor)
 module.exports = app;

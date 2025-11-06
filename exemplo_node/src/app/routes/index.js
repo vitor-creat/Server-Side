@@ -7,7 +7,7 @@ const aboutController = require("../controller/aboutController");
 routes.get("/", get);
 routes.get("/alunos/:nomeAluno/nota1/:notaAluno", getAlunos);
 
-//
+
 routes.get('/home_ejs', homeController);
 routes.get('/about_ejs', aboutController);
 

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+body>
+<h1>Lista de Exercícios</h1>
+<ul>
+    <% lista.forEach(exercicio=> { %>
+        <li>
+            <%= exercicio.descricao %> <a href="/professor/remover/<%= exercicio.id%>">[Remover]</a>
+        </li>
+        <% }) %>
+</ul>
+<a href="professor/adicionar">Adicionar
+    Exercício</a>
+</body>
+
+</html>
