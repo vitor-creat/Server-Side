@@ -1,4 +1,4 @@
-const lista_exercicios = require("../model/exercicio ");
+const lista_exercicios = require("../model/exercicio");
 
 module.exports.listar = (req, res) => {
   lista = lista_exercicios.listar();
