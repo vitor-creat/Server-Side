@@ -1,0 +1,59 @@
+<!--
+<!-- views/teacher.ejs -->
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Configurar Questão — <%= question && question.title ? question.title : 'Nova Questão' %>
+    </title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style_extra.css">
+</head>
+
+<body>
+    <main class="page">
+        <div class="container">
+            <header class="page-header">
+                <h1>Configurar Questão</h1>
+                <p class="lead">Preencha os campos abaixo. Você pode voltar depois e editar.</p>
+            </header>
+
+
+            <form class="card form-card" action="<%= formAction || '/questions' %>" method="POST" novalidate>
+                <div class="field">
+                    <label for="title">Título</label>
+                    <input id="title" name="title" type="text" placeholder="Ex.: Equação do 2º grau"
+                        value="<%= question ? question.title : '' %>" required>
+                </div>
+
+
+                <div class="field">
+                    <label for="description">Descrição / Enunciado</label>
+                    <textarea id="description" name="description" rows="6"
+                        placeholder="Descreva a questão aqui"><%= question ? question.description : '' %></textarea>
+                </div>
+
+
+                <div class="field">
+                    <label for="expectedResult">Resultado esperado (texto exato que será usado para verificar)</label>
+                    <textarea id="expectedResult" name="expectedResult" rows="3"
+                        placeholder="Ex.: 42"><%= question ? question.expectedResult : '' %></textarea>
+                    <small class="help">O sistema fará a comparação de acordo com a lógica que você implementar (ex.:
+                        trim, lowercase, números, etc.).</small>
+                </div>
+
+
+                <div class="form-actions">
+                    <button class="btn btn-primary" type="submit">Salvar</button>
+                    <a class="btn btn-ghost" href="<%= cancelUrl || '/' %>">Cancelar</a>
+                </div>
+            </form>
+
+
+        </div>
+    </main>
+</body>
+
+</html>

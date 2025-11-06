@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include ('layout/head') %>
+</head>
+<%- include ('layout/header') %>
+
+  <body class="body-exercicio">
+    <form action="/exercicios/ex4/calcular">
+      <fieldset>
+        <legend>Não tenho criatividade para um nome para esse</legend>
+        <label>Numero</label>
+        <input name="numero">
+        <button type="submit">Calcular</button>
+      </fieldset>
+    </form>
+    <div class="resultado">
+      <% ultimosResultadosEhMultiplo.forEach(resultadosObj=> { %>
+        <li>
+          <%= resultadosObj.ehMultiplo %>
+        </li>
+        <% }); %>
+      <% ultimosResultadosNumerosAteN.forEach(resultadosObj => { %>
+          <%= resultadosObj.numerosAteN %>
+        <% }); %>
+    </div>
+        </div>
+        <%- include ('layout/footer') %>
+  </body>
+
+</html>

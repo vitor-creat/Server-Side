@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include ('layout/head') %>
+  </head>
+  <header><%- include ('layout/header') %></header>
+  <body>
+    <form action="/exercicios/ex1/calcular">
+      <fieldset>
+        <legend>Calcular a area do triângulo</legend>
+        <label>Base</label>
+        <input name="base"/>
+        <label>Altura</label>
+        <input name="altura" />
+        <button type="submit">Calcular</button>
+      </fieldset>
+    </form>
+    <div class="resultado">
+      <% ultimosExercicios.forEach(resultados => { %>
+            <li><%= resultados.area %></li>
+        <% }); %>
+    </div>
+
+    <%- include ('layout/footer') %>
+  </body>
+</html>

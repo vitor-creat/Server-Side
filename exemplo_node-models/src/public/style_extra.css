@@ -1,0 +1,71 @@
+/* public/styles.css */
+:root{
+--bg: #f6f8fb;
+--card: #ffffff;
+--muted: #6b7280;
+--accent: #5b8def;
+--accent-2: #7b61ff;
+--success: #16a34a;
+--danger: #ef4444;
+--radius: 12px;
+--shadow: 0 6px 24px rgba(16,24,40,0.06);
+}
+
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+margin:0;
+font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+background: linear-gradient(180deg,var(--bg),#fff);
+color:#0f172a;
+-webkit-font-smoothing:antialiased;
+-moz-osx-font-smoothing:grayscale;
+}
+
+
+.page{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:48px 16px}
+.container{max-width:900px;width:100%}
+
+
+.page-header{margin-bottom:20px}
+.page-header h1{margin:0;font-size:28px}
+.page-header .lead{margin:6px 0 0;color:var(--muted)}
+
+
+.card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px}
+.form-card{padding:24px;}
+.question-card{padding:20px}
+
+
+.field{display:flex;flex-direction:column;margin-bottom:16px}
+label{font-weight:600;margin-bottom:8px}
+input[type=text], textarea{
+border:1px solid #e6edf3;padding:12px;border-radius:10px;font-size:15px;outline:none;transition:box-shadow .12s,border-color .12s;
+}
+input[type=text]:focus, textarea:focus{box-shadow:0 6px 18px rgba(91,141,239,0.12);border-color:var(--accent)}
+
+
+.help{font-size:13px;color:var(--muted);margin-top:6px}
+
+
+.form-actions{display:flex;gap:12px;align-items:center;margin-top:8px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 16px;border-radius:10px;border:0;cursor:pointer;font-weight:600}
+.btn-primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:white}
+.btn-ghost{background:transparent;border:1px solid #e6edf3;color:var(--muted);text-decoration:none;padding:9px 14px}
+
+
+.result-card{margin-top:18px;padding:14px;border-radius:10px}
+.result-card.correct{background:rgba(22,163,74,0.08);border:1px solid rgba(22,163,74,0.12);color:var(--success)}
+.result-card.incorrect{background:rgba(239,68,68,0.06);border:1px solid rgba(239,68,68,0.12);color:var(--danger)}
+.result-text{margin:0}
+.expected{margin-top:8px;color:var(--muted)}
+
+
+.empty{text-align:center;padding:40px}
+
+
+@media (max-width:600px){
+.container{padding:0 8px}
+.page{padding:32px 8px}
+}
