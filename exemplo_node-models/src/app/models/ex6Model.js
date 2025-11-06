@@ -1,13 +1,24 @@
-let resultados = []
+let resultadosSoma = []
 
-function calculaArea(base, altura) {
-    const area = base*altura
-    resultados.push({area: area})
+function recebeNumeroString(numeroString) {
+   let numeros = numeroString.map(Number)
+    let Somapares = 0;
+  for (let i = 0; i < numeros.length; i++) {
+    if (numeros[i] % 2 === 0) {
+      Somapares += numeros[i]; //2 4 10 20 2
+    }
+  }
+  resultadosSoma.push({resultadoSoma: Somapares})
 
-    return resultados
+    return resultadosSoma
 }
 function exibirResultado() {
-    return resultados;
+    return resultadosSoma;
 }
 
-module.exports = {calculaArea, exibirResultado}
+module.exports = {recebeNumeroString, exibirResultado}
+
+
+// let numeroString = req.query.numerosArr.split(",");
+// let numeros = numeroString.map(Number)
+//   

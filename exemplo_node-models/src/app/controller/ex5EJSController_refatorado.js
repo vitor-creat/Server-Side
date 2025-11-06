@@ -1,18 +1,15 @@
-module.exports.calcular = (req, res, next) => {
+const ex5 = require("../models/ex5Model")
+module.exports.eDivisivel = (req, res) => {
   let num = req.query.numero;
   let divisor = req.query.divisor;
-  function eDivisivel() {
-    num % divisor == 0 ? true : false;
-  }
-  eDivisivel();
-  let resultadoFunc = num % divisor == 0 ? "é divisivel" : "Não é divisivel";
+  const exercicio5 = ex5.eDivisivel(num, divisor)
 
-  res.render("ex5", {resultadoFunc})
+  res.render("ex5", {exercicio5})
 };
 
 
-module.exports.mostrar = (req, res) => {
-    let resultadoFunc = ""
-    res.render("ex5", {resultadoFunc})
+module.exports.exibirResultado = (req, res) => {
+    const exercicio5 = ex5.exibirResultado()
+    res.render("ex5", {exercicio5})
 
 };

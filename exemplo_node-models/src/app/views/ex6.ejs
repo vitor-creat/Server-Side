@@ -13,7 +13,14 @@
         <button type="submit">Calcular</button>
       </fieldset>
     </form>
-    <div class="resultado"> <%= Somapares %> </div>
+    <div class="resultado">
+      <% exercicio6.forEach(resultados => { %>
+        <li>
+          <%= resultados.resultadoSoma %>
+        </li>
+      
+      <% }) %>
+    </div>
     <%- include ('layout/footer') %>
   </body>
 </html>
