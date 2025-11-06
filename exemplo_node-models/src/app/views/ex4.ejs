@@ -16,15 +16,15 @@
       </fieldset>
     </form>
     <div class="resultado">
-      <% ultimosExercicios.forEach(resultadosObj=> { %>
+      <% ultimosResultadosEhMultiplo.forEach(resultadosObj=> { %>
         <li>
-          <%= resultadosObj.resultados %>
-          <%= resultadosObj.numerosAteN %>
+          <%= resultadosObj.ehMultiplo %>
         </li>
         <% }); %>
+      <% ultimosResultadosNumerosAteN.forEach(resultadosObj => { %>
+          <%= resultadosObj.numerosAteN %>
+        <% }); %>
     </div>
-    <%=numerosAteNString%>
-      <%=verificaMultiplo%>
         </div>
         <%- include ('layout/footer') %>
   </body>

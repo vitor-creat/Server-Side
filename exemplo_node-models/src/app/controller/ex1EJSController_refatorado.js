@@ -15,6 +15,8 @@ exports.exibirResultado = (req, res) => {
   const exercicio1 = ex1.exibirResultado();
   const n = exercicio1.length;
   const start = n - 5 > 0 ? n - 5 : 0;
+  
   ultimosExercicios = exercicio1.slice(start, n);
+  console.log(exercicio1.length)
   res.render("ex1", { ultimosExercicios });
 };

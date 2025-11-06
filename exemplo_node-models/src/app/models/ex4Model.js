@@ -7,7 +7,7 @@ function listarNumerosEMultiploDe3(N) {
       : `O numero ${N} não é multiplo de 3`;
   resultados.push({ ehMultiplo: numeroEhMultiplo });
   for (let i = 1; i <= N; i++) {
-    numerosAteNString.push(i) ;
+    numerosAteN.push({numerosAteN: i}) ;
   }
   return {resultados, numerosAteN};
 }
@@ -15,6 +15,7 @@ function exibirResultado() {
   return {resultados, numerosAteN};
 }
 
+module.exports = {listarNumerosEMultiploDe3, exibirResultado}
 // module.exports = {calculaArea, exibirResultado}
 //   let numerosAteNString = "";
 //
