@@ -1,6 +1,6 @@
 Esse repositorio é para caso você esteja perdido na aula do professor Max
 
-O arquivo virá sem a pasta 'node_modules', portanto, sem as dependecias. 
+O arquivo virá sem a pasta 'node_modules', portanto, sem as dependecias.
 
 Para instalar as dependencias, basta você digitar 'npm install' que as dependencias já serão automaticamente instaladas
 

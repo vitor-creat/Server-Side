@@ -6,13 +6,20 @@ function adicionar(exercicio) {
 function listar() {
     return lista
 }
-// function atualizar(exercicio) {
-//     lista = lista.find()
+// function atualizar(exercicioAtualizado) {
+//     lista = lista.find(ex => ex.id == exercicioAtualizado.id)
+//     if (lista) {
+//         lista.title = exercicioAtualizado.titlez
+//         lista.descricao = exercicioAtualizado.descricao
+//         lista.resposta = exercicioAtualizado.resposta
+//         lista.pontos = exercicioAtualizado.pontos
+//     }
 // }
-function remover(exercicio) {
-    lista = lista.filter(ex => ex.id != exercicio.id)
+function remover(exercicio){
+ lista = lista.filter(ex => ex.id != exercicio.id)
 }
 
+
 module.exports = {
-    adicionar, listar, remover
+    adicionar, listar ,remover
 }

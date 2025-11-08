@@ -6,7 +6,6 @@ let tarefas = [];
 //função para pegar a tarefa e adicionar no array tarefas
 function adicionarTarefa(descricao) {
     tarefas.push({ id: Date.now(), descricao });
-    console.log(tarefas[0])
 }
 //vai exibir as tarefas
 function obterTarefas() {

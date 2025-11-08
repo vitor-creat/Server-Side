@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Atualizar Questão — <%= lista.title ? lista.title : 'Nova Questão' %>
+    </title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+    <main class="page">
+        <div class="container">
+            <header class="page-header">
+                <h1>Atualizar Questão</h1>
+                <p class="lead">Preencha os campos abaixo. Você pode voltar depois e editar.</p>
+            </header>
+        
+
+            <form class="card form-card" action="" method="POST" novalidate>
+
+                <div class="field">
+                    <label >Título</label>
+                    <input id="title" name="title" type="text" placeholder="Ex.: Equação do 2º grau"
+                        value="<%= lista ? lista.title : '' %>" required><%= lista.title %>
+                </div>
+
+
+                <div class="field">
+                    <label >Descrição / Enunciado</label>
+                    <textarea id="description" name="descricao" rows="6"
+                        placeholder="Descreva a questão aqui"><%= lista ? lista.descricao : '' %><%= lista.descricao %></textarea>
+                </div>
+
+
+                <div class="field">
+                    <label>Resultado esperado (texto exato que será usado para verificar)</label>
+                    <textarea id="resposta" name="resposta" rows="3"
+                        placeholder="Ex.: 42"><%= lista ? lista.resposta : '' %> <%= lista.resposta %> </textarea>
+                    <small class="help">O sistema fará a comparação de acordo com a lógica que você implementar (ex.:
+                        trim, lowercase, números, etc.).</small>
+                </div>
+
+                <div class="field">
+                    <label >Valor esperado / Resposta esperado</label>
+                    <textarea id="pontos" name="pontos" rows="6"
+                        placeholder="Digite quantos pontos a questão vale"><%= lista ? lista.pontos : '' %><%= lista.pontos %></textarea>
+                </div>
+
+                <div class="form-actions">
+                    <button class="btn btn-primary" type="submit">Salvar alterações</button>
+                    <a class="btn btn-ghost" href="<%= '/' %>">Cancelar</a>
+                </div>
+            </form>
+
+
+        </div>
+    </main>
+</body>
+
+</html>

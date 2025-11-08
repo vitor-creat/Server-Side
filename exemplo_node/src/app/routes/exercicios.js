@@ -1,6 +1,5 @@
 const routes = require("express").Router();
 
-
 const ex3 = require("../controller/ex3");
 const ex1EJSRefatorado = require("../controller/ex1EJSController_refatorado");
 const ex2EJSRefatorado = require("../controller/ex2EJSController_refatorado");
@@ -17,7 +16,6 @@ routes.get("/ex4", ex4EJSRefatorado.mostrar);
 routes.get("/ex5", ex5EJSRefatorado.mostrar);
 routes.get("/ex6", ex6EJSRefatorado.mostrar);
 
-//Rotas do resultado dos exercicios
 routes.get("/ex1/calcular", ex1EJSRefatorado.calcular);
 routes.get("/ex2/calcular", ex2EJSRefatorado.calcular);
 routes.get("/ex4/calcular", ex4EJSRefatorado.calcular);
