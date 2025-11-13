@@ -6,13 +6,21 @@ function adicionar(exercicio) {
 function listar() {
     return lista
 }
-// function atualizar(exercicio) {
-//     lista = lista.find()
-// }
-function remover(exercicio) {
-    lista = lista.filter(ex => ex.id != exercicio.id)
+
+function buscar(id){
+    return lista.find(ex => ex.id === id)
+}
+
+function atualizar(exercicio) {
+    idx = lista.findIndex(ex => ex.id === exercicio.id)
+    
+    lista[idx] = exercicio
+    
+}
+function remover(id) {
+    lista = lista.filter(ex => ex.id != id)
 }
 
 module.exports = {
-    adicionar, listar, remover
+    adicionar, listar, remover, atualizar, buscar
 }

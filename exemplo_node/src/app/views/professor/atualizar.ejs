@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Adicionar Exercício </h1>
+    <form action="/professor/atualizar" method="post">
+        <input type="number" name="id" placeholder="Descrição do exercicio " required value="<%= exercicio.id %>" hidden><br />
+        <input type="text" name="descricao" placeholder="Descrição do exercicio " required value="<%= exercicio.descricao %>"><br />
+        <input type="text" name="resposta" placeholder="Resposta correta do exercicio " required value="<%= exercicio.resposta %>"><br />
+        <input type="number" name="pontos" placeholder="Pontos" required value="<%= exercicio.pontos %>"><br />
+        <button type="submit">atualizar</button>
+    </form>
+</body>
+
+</html>

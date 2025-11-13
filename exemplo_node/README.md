@@ -11,3 +11,10 @@ Diferença entre 'node ./index' e 'npm run dev'
 O 'node ./index' irá apenas abrir o servidor de maneira estatica, portanto, qualquer alteração no servidor terá que fechar e abrir o servidor para ele salvar e iniciar o servidor com as suas alteração feitas.
 
 O 'npm run dev' irá abrir o servidor de maneira estatica também, mas diferentemente do 'node ./index', o 'npm run dev' sempre que detectar uma alteração no servidor, ele automaticamente reinicia o servidor — poupando um enorme tempo 
+
+
+desafio 
+fazer a tela do aluno para ele responder o questionario
+no final mostrar o feedback de quanto o aluno acertou
+desafio desafiador:
+fazer com que o aluno so possa responder cada pergunta apenas uma vez
