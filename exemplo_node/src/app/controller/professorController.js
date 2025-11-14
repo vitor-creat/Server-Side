@@ -1,4 +1,4 @@
-const { render } = require("../../config/custom-express");
+
 const lista_exercicios = require("../model/exercicio");
 
 module.exports.listar = (req, res) => {
