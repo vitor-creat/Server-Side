@@ -1,3 +1,5 @@
+//mudei para const para que o array não possa ser reatribuido
+//impedindo erros que eu demoro muito tempo para consertar
 let lista = []
 
 function adicionar(exercicio) {
@@ -6,20 +8,21 @@ function adicionar(exercicio) {
 function listar() {
     return lista
 }
-// function atualizar(exercicioAtualizado) {
-//     lista = lista.find(ex => ex.id == exercicioAtualizado.id)
-//     if (lista) {
-//         lista.title = exercicioAtualizado.titlez
-//         lista.descricao = exercicioAtualizado.descricao
-//         lista.resposta = exercicioAtualizado.resposta
-//         lista.pontos = exercicioAtualizado.pontos
-//     }
-// }
-function remover(exercicio){
- lista = lista.filter(ex => ex.id != exercicio.id)
+function atualizar(exercicioAtualizado) {
+    const exercicio = lista.find(ex => ex.id == exercicioAtualizado.id)
+    if (exercicio) {
+        exercicio.title = exercicioAtualizado.title
+        exercicio.descricao = exercicioAtualizado.descricao
+        exercicio.resposta = exercicioAtualizado.resposta
+        exercicio.pontos = exercicioAtualizado.pontos
+    }
+}
+function remover(id){
+ lista = lista.filter(ex => ex.id !== id)
+    
 }
 
 
 module.exports = {
-    adicionar, listar ,remover
+    adicionar, listar ,remover, atualizar
 }

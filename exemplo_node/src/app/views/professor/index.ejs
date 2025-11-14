@@ -11,10 +11,11 @@
     <% lista.forEach(exercicio=> { %>
         <li>
             <%= exercicio.descricao %> <a href="/professor/remover/<%= exercicio.id%>">[Remover]</a>
+            <a href="/professor/atualizar/<%= exercicio.id%>">[Atualizar]</a>
         </li>
         <% }) %>
 </ul>
-<a href="professor/adicionar">Adicionar
+<a href="/professor/adicionar">Adicionar
     Exercício</a>
 </body>
 
