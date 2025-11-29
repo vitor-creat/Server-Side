@@ -6,7 +6,7 @@ function adicionar(exercicio) {
 function listar() {
     return lista
 }
-
+  
 function buscar(id){
     return lista.find(ex => ex.id === id)
 }
@@ -15,6 +15,7 @@ function atualizar(exercicio) {
     idx = lista.findIndex(ex => ex.id === exercicio.id)
     
     lista[idx] = exercicio
+    console.log(lista[idx])
     
 }
 function remover(id) {

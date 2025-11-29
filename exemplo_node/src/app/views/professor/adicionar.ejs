@@ -1,21 +1,67 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Configurar Questão — <%= lista.title ? lista.title : 'Nova Questão' %>
+    </title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
-    <h1>Adicionar Exercício </h1>
-    <form action="/professor/adicionar " method="post">
-        <input type="number" name="id" placeholder="Descrição do exercicio " required><br />
-        <input type="text" name="descricao" placeholder="Descrição do exercicio " required><br />
-        <input type="text" name="resposta" placeholder="Resposta correta do exercicio " required><br />
-        <input type="number" name="pontos" placeholder="Pontos" required><br />
-        <button type="submit">Adicionar</button>
-    </form>
+    <main class="page">
+        <div class="container">
+            <header class="page-header">
+                <h1>Configurar Questão</h1>
+                <p class="lead">Preencha os campos abaixo. Você pode voltar depois e editar.</p>
+            </header>
+
+
+            <form class="card form-card" action="/professor/adicionar" method="POST" novalidate>
+                <div class="field">
+                    <div class="field">
+                        <label>Id</label>
+                        <input type="number" name="id" placeholder="Digite o numero da questão" required>
+                    </div>
+
+                    <div class="field">
+                        <label>Título</label>
+                        <input id="title" name="title" type="text" placeholder="Ex.: Equação do 2º grau" required>
+                    </div>
+
+
+                    <div class="field">
+                        <label>Descrição / Enunciado</label>
+                        <textarea id="description" name="descricao" rows="6"
+                            placeholder="Descreva a questão aqui"></textarea>
+                    </div>
+
+                    <div class="field">
+                        <label>Resultado esperado (texto exato que será usado para verificar)</label>
+                        <textarea id="resposta" name="resposta" rows="3"
+                            placeholder="Ex.: 42"></textarea>
+                        <small class="help">O sistema fará a comparação de acordo com a lógica que você implementar
+                            (ex.:
+                            trim, lowercase, números, etc.).</small>
+                    </div>
+
+                    <div class="field">
+                        <label>Valor esperado / Resposta esperado</label>
+                        <input type="number" id="pontos" name="pontos" placeholder="Digite quantos pontos a questão vale"><%= lista ? lista.pontos : '' %><%= lista.pontos %>
+                    </div>
+
+
+                    <div class="form-actions">
+                        <button class="btn btn-primary" type="submit">Salvar</button>
+                        <a class="btn btn-ghost" href="<%= 'professor/listar' %>">Cancelar</a>
+                    </div>
+            </form>
+
+
+        </div>
+    </main>
 </body>
 
 </html>

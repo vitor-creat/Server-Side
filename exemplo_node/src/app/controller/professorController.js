@@ -16,9 +16,10 @@ module.exports.adicionar = (req, res) => {
 };
 
 module.exports.atualizar = (req, res) =>{
-  const {id, descricao, resposta,pontos} = req.body
+  const {id, title, descricao, resposta, pontos} = req.body
   console.log(req.body)
   const exercicio = lista_exercicios.buscar(id)
+  exercicio.title = title
   exercicio.descricao = descricao
   exercicio.resposta = resposta
   exercicio.pontos = pontos
