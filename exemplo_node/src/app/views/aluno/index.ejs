@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Página do Aluno</title>
 </head>
 <h1>Lista de Exercícios</h1>
 <ul>
     <% lista.forEach(exercicio=> { %>
         <li>
-             <%= exercicio.title %> <%= exercicio.descricao %> <a href="/aluno/responder/<%= exercicio.id%>">[Responder]</a>
+            <%= exercicio.descricao %> <a href="/aluno/responder/<%= exercicio.id%>">[Responder]</a>
         </li>
         <% }) %>
 </ul>
