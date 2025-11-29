@@ -3,8 +3,16 @@ const lista_exercicios = require("../model/exercicio");
 
 module.exports.listar = (req, res) => {
   lista = lista_exercicios.listar();
-  res.render("professor/", { lista });
+  let total = 0
+
+  for (let i = 0; i < lista.length; i++) {
+   total = total+ Number(lista[i].pontos);
+    
+  }
+  res.render("professor/", { lista, total });
 };
+//TO DO validar se a resposta do aluno bate com a resposta certa
+//TO DO corrigir o bug de não aparecer a descrição
 module.exports.mostrar = (req, res) => {
   res.render("professor/adicionar");
 };
@@ -16,10 +24,9 @@ module.exports.adicionar = (req, res) => {
 };
 
 module.exports.atualizar = (req, res) =>{
-  const {id, title, descricao, resposta, pontos} = req.body
+  const {id, descricao, resposta, pontos} = req.body
   console.log(req.body)
   const exercicio = lista_exercicios.buscar(id)
-  exercicio.title = title
   exercicio.descricao = descricao
   exercicio.resposta = resposta
   exercicio.pontos = pontos

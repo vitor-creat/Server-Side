@@ -15,7 +15,6 @@ function atualizar(exercicio) {
     idx = lista.findIndex(ex => ex.id === exercicio.id)
     
     lista[idx] = exercicio
-    console.log(lista[idx])
     
 }
 function remover(id) {

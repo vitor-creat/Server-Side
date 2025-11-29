@@ -10,14 +10,12 @@
 <ul>
     <% lista.forEach(exercicio=> { %>
         <li>
-             <%= exercicio.title %> <%= exercicio.descricao %> <a href="/professor/remover/<%= exercicio.id%>">[Remover]</a>
-            <a href="/professor/atualizar/<%= exercicio.id%>">[Atualizar]</a>
+             <%= exercicio.title %> <%= exercicio.descricao %> <a href="/aluno/responder/<%= exercicio.id%>">[Responder]</a>
         </li>
         <% }) %>
 </ul>
 <h2>Total de pontos: <%= total %></h2>
-<a href="adicionar">Adicionar
-    Exercício</a>
+</a>
 </body>
 
 </html>

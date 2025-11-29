@@ -19,7 +19,10 @@ app.set("views", path.join(__dirname, "..", "app", "views"));
 const routes = require("../app/routes");
 const routes_exercs = require("../app/routes/exercicios");
 const routes_professor = require("../app/routes/professor")
+const routes_aluno = require("../app/routes/aluno")
+
 app.use("/", routes);
 app.use("/exercicios", routes_exercs)
 app.use("/professor", routes_professor)
+app.use("/aluno",routes_aluno )
 module.exports = app;

@@ -15,37 +15,26 @@
   <main class="page">
     <div class="container">
       <header class="page-header">
-        <h1>Atualizar Questão</h1>
-        <p class="lead">
-          Preencha os campos abaixo para atualizar a questão.
-        </p>
-      </header>
+        <h1>Responder Questão</h1>
+    </header>
 
-      <form class="card form-card" action="/professor/atualizar" method="POST">
+      <form class="card form-card" action="/aluno/responder" method="POST">
         <div class="field">
           <div class="field">
             <label hidden>Id</label>
-            <input type="number" name="id" hidden value="<%= exercicio ? exercicio.id : '' %>">
+            <input type="hidden" name="id" value="<%= exercicio.id %>">
           </div>
 
           <div class="field">
             <label>Descrição / Enunciado</label>
-            <textarea id="descricao" name="descricao" rows="6" placeholder="Descreva a questão aqui">
-<%= exercicio ? exercicio.descricao : '' %></textarea>
+            <textarea id="descricao" name="descricao" value="<%= exercicio ? exercicio.descricao : '' %>"readonly> </textarea>
           </div>
 
           <div class="field">
             <label>Resultado esperado (texto exato que será usado para verificar)</label>
-            <textarea id="resposta" name="resposta" rows="3" placeholder="Ex.: 42">
-<%= exercicio ? exercicio.resposta : '' %></textarea>
+            <textarea id="resposta" name="resposta" rows="3" placeholder="Ex.: 42"></textarea>
             <small class="help">O sistema fará a comparação de acordo com a lógica que você
               implementar (ex.: trim, lowercase, números, etc.).</small>
-          </div>
-
-          <div class="field">
-            <label>Valor esperado / Resposta esperado</label>
-            <textarea id="pontos" name="pontos" rows="6" placeholder="Digite quantos pontos a questão vale">
-<%= exercicio ? exercicio.pontos : '' %></textarea>
           </div>
 
           <div class="form-actions">
