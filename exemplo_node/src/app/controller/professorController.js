@@ -11,8 +11,7 @@ module.exports.listar = (req, res) => {
   }
   res.render("professor/", { lista, total });
 };
-//TO DO validar se a resposta do aluno bate com a resposta certa
-//TO DO corrigir o bug de não aparecer a descrição
+
 module.exports.mostrar = (req, res) => {
   res.render("professor/adicionar");
 };
